@@ -7,11 +7,17 @@ class ImagemTT extends Component {
          
 
        
-        let imagem = 'https://st.depositphotos.com/1144687/1717/i/600/depositphotos_17177253-stock-photo-open-book.jpg'
+        let imgBookOpen = './img/LVAberto.png',
+            imgBookClose = './img/LVFechado.png'
         return(
             <View style={style.container}>
                 <Image
-                    source={{uri: imagem}}
+                
+                    source={{
+                        uri: this.state.aberto
+                          ? this.state.imgBookOpen
+                          : this.state.imgBookClose,
+                      }}
                     style={{ width: this.props.largura, height: this.props.altura , alignItems:this.props.alinha}}
                     
                 />
